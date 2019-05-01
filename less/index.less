@@ -59,15 +59,29 @@ html, body {
 	height: 100%;
 }
 
-// Less Declartions
-
+// minis
 .red-border {
 	border: solid red 1px;
 }
 
-@black: black;
-@white: white;
-@border-color: #dddddd;
+.max-width {
+	max-width: 100%;
+}
+
+.display-flex {
+	display: flex;
+}
+
+// border colors
+@border-color-dark: black;
+@border-color-light: #dddddd;
+
+//font-size stack
+@text-small: 1em;
+@text-reg: 1.125em;
+@text-med: 1.25em;
+@text-large: 1.5em;
+@text-jumbo: 2em;
 
 
 // CSS Start
@@ -78,14 +92,14 @@ html, body {
 h1 {
 	color: #252122;
 	font-weight: 600;
-	font-size: 1.5em;
+	font-size: @text-large;
 	letter-spacing: -0.035em;
 	line-height: 1;
 	margin: 0.5em 0;
 }
 
 h2, h3, h4, h5, h6 {
-	font-size: 1.25em;
+	font-size: @text-med;
 	margin: 0.5em 0;
 }
 
@@ -98,7 +112,7 @@ button {
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-size: 16px;
+	font-size: @text-small;
 	margin: 12px 2px;
 	cursor: pointer;
 }
@@ -109,13 +123,13 @@ p {
 }
 
 img {
-	max-width: 100%;
+	.max-width;
     height: auto;
 }
 // Nested Container Selectors
 
 .container {
-	max-width: 100%;
+	.max-width;
 	width: 70em;
 	margin: 0 auto;
 	// .red-border;
@@ -133,7 +147,7 @@ img {
 				margin: 0 0.35em 0 0.35em;
 
 				@media (max-width:500px){
-					display: flex;
+					.display-flex;
 					flex-direction: column;
 					align-items: center;
 				}
@@ -148,7 +162,7 @@ img {
 		} //end nav
 
 		.info-main {
-			max-width: 100%;
+			.max-width;
 			background: #e8e9f1;
 			width: 67em;
 			margin: 0 auto;
@@ -168,7 +182,7 @@ img {
 		}
 
 		.row-info {
-			display: flex;
+			.display-flex;
 			margin-left: 1.5em;
 			justify-content: space-between;
 			margin-top: 1.3em;
@@ -194,13 +208,13 @@ img {
 			  }
 			  
 			  td, th {
-				border: 1px solid @border-color;
+				border: 1px solid @border-color-light;
 				text-align: left;
 				padding: 8px;
 			  }
 			  
 			  tr:nth-child(even) {
-				background-color: @border-color;
+				background-color: @border-color-light;
 			  }
 		} //end work history
 
@@ -209,9 +223,8 @@ img {
 
 			form {
 				max-width: 98%;
-				// width: 400px;
 				padding: 1em;
-				border: 1px solid @border-color;
+				border: 1px solid@border-color-light;
 				border-radius: 1em;
 			  }
 			  
@@ -222,21 +235,19 @@ img {
 			  label {
 				display: inline-block;
 				width: 90px;
-				// max-width: 100%;
 				text-align: left;
 			  }
 			  
 			  input, textarea {
 				font: 1em sans-serif;
-				// max-width: 100%;
 				width: 300px;
-				max-width: 100%;
+				.max-width;
 				box-sizing: border-box;
-			  	border: 1px solid @border-color;
+			  	border: 1px solid @border-color-light;
 			  }
 			  
 			  input:focus, textarea:focus {
-				border-color: @black;
+				border-color: @border-color-dark;
 			  }
 			  
 			  textarea {
