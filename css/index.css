@@ -1,1 +1,294 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+.red-border {
+  border: solid red 1px;
+}
+.max-width {
+  max-width: 100%;
+}
+.display-flex {
+  display: flex;
+}
+h1 {
+  color: #252122;
+  font-weight: 600;
+  font-size: 1.5em;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  margin: 0.5em 0;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1.25em;
+  margin: 0.5em 0;
+}
+button {
+  background-color: #4CAF50;
+  /* Green */
+  border: none;
+  border-radius: 0.2em;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  margin: 12px 2px;
+  cursor: pointer;
+}
+p {
+  margin-bottom: 2em;
+  line-height: 1.4em;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.container {
+  max-width: 100%;
+  width: 70em;
+  margin: 0 auto;
+}
+.container .nav {
+  margin: 0.5em 0 0 0;
+}
+.container .nav ul {
+  margin: 0;
+}
+.container .nav li {
+  display: inline-block;
+  margin: 0 0.35em 0 0.35em;
+}
+@media (max-width: 500px) {
+  .container .nav li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.container .nav a {
+  border-radius: 5px;
+  color: #5d5d5d;
+  text-decoration: none;
+  padding: 0.6em 1.2em 0.6em 1.2em;
+}
+.container .info-main {
+  max-width: 100%;
+  background: #e8e9f1;
+  width: 67em;
+  margin: 0 auto;
+  margin-top: 1em;
+}
+.container .info-main section.intro {
+  margin-left: 1.5em;
+}
+.container .info-main section.intro h1 {
+  margin: 1em 0;
+}
+.container .info-main section.intro h4,
+.container .info-main p {
+  margin: 0.5em 0;
+}
+.container .row-info {
+  display: flex;
+  margin-left: 1.5em;
+  justify-content: space-between;
+  margin-top: 1.3em;
+}
+.container .row-info .col-1 {
+  width: 45%;
+}
+.container .row-info .col-1 table,
+.container .row-info .col-1 th,
+.container .row-info .col-1 td {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 1em;
+}
+.container .work-history {
+  margin-left: 1.5em;
+}
+.container .work-history table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 98%;
+}
+.container .work-history td,
+.container .work-history th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+.container .work-history tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.container .contact {
+  margin-left: 1.5em;
+}
+.container .contact form {
+  max-width: 98%;
+  padding: 1em;
+  border: 1px solid #dddddd;
+  border-radius: 1em;
+}
+.container .contact form div + div {
+  margin-top: 1em;
+}
+.container .contact label {
+  display: inline-block;
+  width: 90px;
+  text-align: left;
+}
+.container .contact input,
+.container .contact textarea {
+  font: 1em sans-serif;
+  width: 300px;
+  max-width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #dddddd;
+}
+.container .contact input:focus,
+.container .contact textarea:focus {
+  border-color: black;
+}
+.container .contact textarea {
+  vertical-align: top;
+  height: 5em;
+}
