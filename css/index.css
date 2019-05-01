@@ -171,11 +171,14 @@ p {
   margin-bottom: 2em;
   line-height: 1.4em;
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
 .container {
   max-width: 100%;
   width: 70em;
   margin: 0 auto;
-  border: solid red 1px;
 }
 .container .nav {
   margin: 0.5em 0 0 0;
@@ -186,6 +189,13 @@ p {
 .container .nav li {
   display: inline-block;
   margin: 0 0.35em 0 0.35em;
+}
+@media (max-width: 500px) {
+  .container .nav li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .container .nav a {
   border-radius: 5px;
@@ -247,9 +257,9 @@ p {
   margin-left: 1.5em;
 }
 .container .contact form {
-  width: 400px;
+  max-width: 98%;
   padding: 1em;
-  border: 1px solid #CCC;
+  border: 1px solid #dddddd;
   border-radius: 1em;
 }
 .container .contact form div + div {
@@ -264,12 +274,13 @@ p {
 .container .contact textarea {
   font: 1em sans-serif;
   width: 300px;
+  max-width: 100%;
   box-sizing: border-box;
-  border: 1px solid #999;
+  border: 1px solid #dddddd;
 }
 .container .contact input:focus,
 .container .contact textarea:focus {
-  border-color: #000;
+  border-color: black;
 }
 .container .contact textarea {
   vertical-align: top;

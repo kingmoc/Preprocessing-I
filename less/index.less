@@ -65,7 +65,15 @@ html, body {
 	border: solid red 1px;
 }
 
+@black: black;
+@white: white;
+@border-color: #dddddd;
+
+
 // CSS Start
+
+
+// Global Element Selectors
 
 h1 {
 	color: #252122;
@@ -100,23 +108,35 @@ p {
 	line-height: 1.4em;
 }
 
+img {
+	max-width: 100%;
+    height: auto;
+}
+// Nested Container Selectors
+
 .container {
 	max-width: 100%;
 	width: 70em;
 	margin: 0 auto;
-	.red-border;
+	// .red-border;
 
 		.nav {
 			margin: 0.5em 0 0 0;
 			
 
 			ul {
-				margin: 0;		
+				margin: 0;
 			}
 
 			li {
 				display: inline-block;
 				margin: 0 0.35em 0 0.35em;
+
+				@media (max-width:500px){
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				}
 			}
 
 			a {
@@ -174,13 +194,13 @@ p {
 			  }
 			  
 			  td, th {
-				border: 1px solid #dddddd;
+				border: 1px solid @border-color;
 				text-align: left;
 				padding: 8px;
 			  }
 			  
 			  tr:nth-child(even) {
-				background-color: #dddddd;
+				background-color: @border-color;
 			  }
 		} //end work history
 
@@ -188,9 +208,10 @@ p {
 			margin-left: 1.5em;
 
 			form {
-				width: 400px;
+				max-width: 98%;
+				// width: 400px;
 				padding: 1em;
-				border: 1px solid #CCC;
+				border: 1px solid @border-color;
 				border-radius: 1em;
 			  }
 			  
@@ -201,18 +222,21 @@ p {
 			  label {
 				display: inline-block;
 				width: 90px;
+				// max-width: 100%;
 				text-align: left;
 			  }
 			  
 			  input, textarea {
 				font: 1em sans-serif;
-			  	width: 300px;
+				// max-width: 100%;
+				width: 300px;
+				max-width: 100%;
 				box-sizing: border-box;
-			  	border: 1px solid #999;
+			  	border: 1px solid @border-color;
 			  }
 			  
 			  input:focus, textarea:focus {
-				border-color: #000;
+				border-color: @black;
 			  }
 			  
 			  textarea {
